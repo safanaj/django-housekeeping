@@ -11,7 +11,7 @@ ov = $(shell dpkg-parsechangelog | grep ^Version | cut -d\  -f2 | cut -d- -f1)
 git-orig-source:
 	dh_testdir
 	test -d .git && \
-	git archive --prefix=$(pn)-$(ov)/ upstream-gh/master | \
+	git ls | grep -v debian | tar -T - --xform="s,^\(.*\),$(pn)-$(ov)/\1," -cf - | \
 	xz -9c > ../$(pn)_$(ov).orig.tar.xz || true
 
 # waiting for upstream release ... use git
