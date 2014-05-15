@@ -13,12 +13,22 @@ Package: python-django-housekeeping
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends},
  python-six
-Description: Pluggable housekeeping framework for Django sites
- Extensible framework to manage inter-dependents tasks execution.
+Recommends: python-django
+Description: Pluggable housekeeping framework for Django sites.
+  django\_housekeeping provides a management command that finds and run
+  tasks defined by your Django apps.
+  .
+  Tasks can declare dependencies on each other, run in multiple stages
+  and provide infrastructure that other tasks can use.
 
 Package: python3-django-housekeeping
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends},
  python3-six
-Description: Pluggable housekeeping framework for Django sites
- Extensible framework to manage inter-dependents tasks execution.
+Recommends: python3-django
+Description: Pluggable housekeeping framework for Django sites.
+  django\_housekeeping provides a management command that finds and run
+  tasks defined by your Django apps.
+  .
+  Tasks can declare dependencies on each other, run in multiple stages
+  and provide infrastructure that other tasks can use.
