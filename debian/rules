@@ -14,8 +14,7 @@ git-orig-source:
 	git ls | grep -v debian | tar -T - --xform="s,^\(.*\),$(pn)-$(ov)/\1," -cf - | \
 	xz -9c > ../$(pn)_$(ov).orig.tar.xz || true
 
-# waiting for upstream release ... use git
 get-orig-source:
 	dh_testdir
-	test -e ../$(pn)_$(ov).orig.tar.xz || \
-		make -f debian/rules git-orig-source
+	test -e ../$(pn)_$(ov).orig.tar.gz || \
+		uscan --force-download
