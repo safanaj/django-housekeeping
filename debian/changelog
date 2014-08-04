@@ -1,3 +1,10 @@
+django-housekeeping (1.0-1~bpo70+1) wheezy-backports; urgency=medium
+
+  * Rebuild for wheezy-backports.
+  * avoid python3 stuff and use dh buildsystem distutils
+
+ -- Marco Bardelli <bardelli.marco@gmail.com>  Mon, 04 Aug 2014 22:41:50 +0200
+
 django-housekeeping (1.0-1) unstable; urgency=low
 
   * Initial package. Closes: #748875
